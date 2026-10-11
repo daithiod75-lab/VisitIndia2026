@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan-India Cultural Exchange Programme 2026 | Rishikul Vidyapeeth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sakura: '#FFB7C5',
+                        saffron: '#FF9933',
+                        indiaGreen: '#138808',
+                        japanRed: '#BC002D',
+                        deepIndigo: '#1A1C2E',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .gradient-banner {
+            background: linear-gradient(135deg, #FF9933 0%, #FFFFFF 50%, #138808 100%);
+        }
+        .japan-gradient {
+            background: linear-gradient(135deg, #BC002D 0%, #FF6B6B 100%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col selection:bg-rose-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Branding -->
+                <div class="flex items-center space-x-3">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-tr from-red-600 to-amber-500 text-white font-bold text-xl shadow-lg shadow-red-200">
+                        🇮🇳🇯🇵
+                    </div>
+                    <div>
+                        <h1 class="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                            RISHIKUL VIDYAPEETH
+                        </h1>
+                        <p class="text-xs text-rose-600 font-semibold uppercase tracking-wider flex items-center gap-1">
+                            <span>Cultural Exchange 2026</span>
+                            <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Controls: Lang Toggle & Search -->
+                <div class="flex items-center space-x-3">
+                    <button id="langToggle" onclick="toggleLanguage()" class="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold px-4 py-2 rounded-xl transition duration-200 border border-slate-300 shadow-sm text-sm">
+                        <i class="fa-solid fa-language text-lg text-rose-600"></i>
+                        <span id="langLabel">日本語に切り替え</span>
+                    </button>
+
+                    <a href="#schedule" class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-red-600 to-rose-600 text-white font-semibold px-4 py-2 rounded-xl hover:opacity-90 transition shadow-md shadow-rose-200 text-sm">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span data-en="View Itinerary" data-jp="日程を見る">View Itinerary</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white py-12 lg:py-16">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs sm:text-sm font-medium">
+                        <i class="fa-solid fa-paper-plane text-rose-400"></i>
+                        <span data-en="Official Schedule & Information Portal" data-jp="公式スケジュール＆情報ポータル">Official Schedule & Information Portal</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+                        <span class="block" data-en="Japan-India Cultural" data-jp="日本・インド文化交流">Japan-India Cultural</span>
+                        <span class="bg-gradient-to-r from-amber-400 via-rose-400 to-emerald-400 bg-clip-text text-transparent" data-en="Exchange Programme 2026" data-jp="プログラム 2026">Exchange Programme 2026</span>
+                    </h2>
+
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl" data-en="Welcoming our esteemed delegates from Japan to Sonepat, India (08 Oct - 18 Oct 2026). Celebrating cross-cultural unity, joint education, and lifetime friendships." data-jp="日本の皆様をインド・ソネパトへお迎えします（2026年10月8日〜18日）。異文化交流、共同学習、そして生涯の友情を育む11日間。">
+                        Welcoming our esteemed delegates from Japan to Sonepat, India (08 Oct - 18 Oct 2026). Celebrating cross-cultural unity, joint education, and lifetime friendships.
+                    </p>
+
+                    <!-- Stat Pill Badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                        <div class="bg-white/5 backdrop-blur border border-white/10 p-3 rounded-xl text-center">
+                            <span class="block text-2xl font-black text-amber-400">11</span>
+                            <span class="text-xs text-slate-400" data-en="Days Duration" data-jp="実施日数">Days Duration</span>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur border border-white/10 p-3 rounded-xl text-center">
+                            <span class="block text-2xl font-black text-rose-400">06</span>
+                            <span class="text-xs text-slate-400" data-en="Japan Delegates" data-jp="訪日団人数">Japan Delegates</span>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur border border-white/10 p-3 rounded-xl text-center">
+                            <span class="block text-2xl font-black text-emerald-400">02</span>
+                            <span class="text-xs text-slate-400" data-en="Teachers" data-jp="引率教員">Teachers</span>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur border border-white/10 p-3 rounded-xl text-center">
+                            <span class="block text-2xl font-black text-cyan-400">04</span>
+                            <span class="text-xs text-slate-400" data-en="Students" data-jp="派遣学生">Students</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Countdown & Quick Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-slate-800/80 backdrop-blur border border-slate-700/80 rounded-3xl p-6 shadow-2xl space-y-6">
+                        <div class="flex items-center justify-between border-b border-slate-700 pb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
+                                <span class="font-bold text-sm tracking-wide text-slate-200 uppercase" data-en="Event Status" data-jp="開催ステータス">Event Status</span>
+                            </div>
+                            <span class="text-xs bg-emerald-500/20 text-emerald-300 font-semibold px-3 py-1 rounded-full border border-emerald-500/30" data-en="Scheduled: Oct 08, 2026" data-jp="2026年10月8日 開催">Scheduled: Oct 08, 2026</span>
+                        </div>
+
+                        <!-- Arrival Countdown Clock -->
+                        <div>
+                            <p class="text-xs text-slate-400 font-medium mb-3 uppercase tracking-wider" data-en="Countdown to Arrival at Delhi IGI Airport" data-jp="デリー空港到着までのカウントダウン">Countdown to Arrival at Delhi IGI Airport</p>
+                            <div class="grid grid-cols-4 gap-2 text-center" id="countdown">
+                                <div class="bg-slate-900/80 p-3 rounded-2xl border border-slate-700">
+                                    <span id="cd-days" class="block text-2xl sm:text-3xl font-black text-amber-400">00</span>
+                                    <span class="text-[10px] text-slate-400 uppercase font-bold" data-en="Days" data-jp="日">Days</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-3 rounded-2xl border border-slate-700">
+                                    <span id="cd-hours" class="block text-2xl sm:text-3xl font-black text-rose-400">00</span>
+                                    <span class="text-[10px] text-slate-400 uppercase font-bold" data-en="Hours" data-jp="時間">Hours</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-3 rounded-2xl border border-slate-700">
+                                    <span id="cd-mins" class="block text-2xl sm:text-3xl font-black text-emerald-400">00</span>
+                                    <span class="text-[10px] text-slate-400 uppercase font-bold" data-en="Mins" data-jp="分">Mins</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-3 rounded-2xl border border-slate-700">
+                                    <span id="cd-secs" class="block text-2xl sm:text-3xl font-black text-cyan-400">00</span>
+                                    <span class="text-[10px] text-slate-400 uppercase font-bold" data-en="Secs" data-jp="秒">Secs</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Details -->
+                        <div class="space-y-2 text-xs sm:text-sm text-slate-300 bg-slate-900/50 p-4 rounded-2xl border border-slate-700/50">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400" data-en="Flight Arrival:" data-jp="フライト到着:">Flight Arrival:</span>
+                                <span class="font-semibold text-white">08 Oct 2026 @ 4:20 PM (Terminal 3)</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400" data-en="Arrival at School:" data-jp="学校到着:">Arrival at School:</span>
+                                <span class="font-semibold text-amber-300">08 Oct 2026 @ 7:30 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400" data-en="Departure for Japan:" data-jp="帰国出発:">Departure for Japan:</span>
+                                <span class="font-semibold text-rose-300">18 Oct 2026 @ 1:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12 flex-grow">
+
+        <!-- Coordinator Directory Bar -->
+        <section class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-4 mb-6">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-users-gear text-rose-600"></i>
+                        <span data-en="Programme Coordination Team" data-jp="プログラム運営・担当者">Programme Coordination Team</span>
+                    </h3>
+                    <p class="text-xs text-slate-500" data-en="Rishikul Vidyapeeth Sonepat Key Contacts" data-jp="リシクル・ヴィディヤピート校 担当窓口">Rishikul Vidyapeeth Sonepat Key Contacts</p>
+                </div>
+                <div class="flex items-center gap-2 bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold px-3 py-1.5 rounded-xl">
+                    <i class="fa-solid fa-phone"></i>
+                    <span data-en="Overall Lead: Ms Archana Sharma (+91 9991117374)" data-jp="全体責任者: アーチャナ・シャルマ先生 (+91 9991117374)">Overall Lead: Ms Archana Sharma (+91 9991117374)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="coordinators-grid">
+                <!-- Dynamically Rendered Coordinators -->
+            </div>
+        </section>
+
+        <section id="schedule" class="space-y-6">
+            <!-- Section Header -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-amber-100 text-amber-800 font-bold text-xs uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span data-en="Daily Itinerary" data-jp="日次スケジュール">Daily Itinerary</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900" data-en="Programme Timeline (08 - 18 October 2026)" data-jp="交流プログラム全行程 (2026年10月8日〜18日)">
+                        Programme Timeline (08 - 18 October 2026)
+                    </h2>
+                </div>
+
+                <!-- Search and Day Filter Buttons -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                    <!-- Search Input -->
+                    <div class="relative">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                        <input type="text" id="scheduleSearch" oninput="filterSchedule()" placeholder="Search activities, venue, staff..." class="w-full sm:w-64 pl-9 pr-4 py-2 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-500/50 shadow-sm">
+                    </div>
+
+                    <!-- Category Filter dropdown -->
+                    <select id="categoryFilter" onchange="filterSchedule()" class="bg-white border border-slate-300 text-slate-700 text-sm font-medium rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-rose-500/50 shadow-sm">
+                        <option value="ALL" data-en="All Categories" data-jp="すべてのカテゴリー">All Categories</option>
+                        <option value="Culture" data-en="Culture & Ceremonies" data-jp="文化・式典">Culture & Ceremonies</option>
+                        <option value="Excursion" data-en="Excursions & Visits" data-jp="遠足・校外学習">Excursions & Visits</option>
+                        <option value="Sports" data-en="Sports & Yoga" data-jp="スポーツ・ヨガ">Sports & Yoga</option>
+                        <option value="Academic" data-en="Academics & Classes" data-jp="授業・学術交流">Academics & Classes</option>
+                        <option value="Host" data-en="Host Family Stay" data-jp="ホストファミリー">Host Family Stay</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Day Tabs Bar -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 custom-scrollbar" id="dayTabsContainer">
+                <!-- Dynamically Generated Day Buttons -->
+            </div>
+
+            <!-- Schedule Cards Container -->
+            <div class="space-y-4" id="scheduleCardsContainer">
+                <!-- Dynamically Populated Cards -->
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Delegate Info Card -->
+            <div class="bg-gradient-to-br from-rose-50 to-orange-50 border border-rose-200 rounded-3xl p-6 shadow-sm space-y-4">
+                <div class="flex items-center justify-between border-b border-rose-200/60 pb-3">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-passport text-rose-600"></i>
+                        <span data-en="Japanese Visiting Delegation" data-jp="来日訪日団概要">Japanese Visiting Delegation</span>
+                    </h3>
+                    <span class="bg-rose-200 text-rose-800 text-xs font-bold px-2.5 py-1 rounded-full" data-en="6 Members" data-jp="6名">6 Members</span>
+                </div>
+                <ul class="space-y-3 text-sm text-slate-700">
+                    <li class="flex items-center justify-between bg-white/80 p-3 rounded-2xl border border-rose-100">
+                        <span class="font-semibold" data-en="Teachers / Supervisors" data-jp="引率教員">Teachers / Supervisors</span>
+                        <span class="bg-rose-600 text-white font-bold px-3 py-1 rounded-xl text-xs">2 Members (Male)</span>
+                    </li>
+                    <li class="flex items-center justify-between bg-white/80 p-3 rounded-2xl border border-rose-100">
+                        <span class="font-semibold" data-en="Student Delegates" data-jp="派遣学生">Student Delegates</span>
+                        <span class="bg-indigo-600 text-white font-bold px-3 py-1 rounded-xl text-xs">4 Students (2 Male, 2 Female)</span>
+                    </li>
+                    <li class="flex items-center justify-between bg-white/80 p-3 rounded-2xl border border-rose-100">
+                        <span class="font-semibold" data-en="Primary Accommodation" data-jp="主な滞在先">Primary Accommodation</span>
+                        <span class="text-slate-900 font-bold text-xs" data-en="International Block Suites / Host Families" data-jp="国際館スイート / ホストファミリー">International Block Suites / Host Families</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Host Family Rules & Info Card -->
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 rounded-3xl p-6 shadow-sm space-y-4">
+                <div class="flex items-center justify-between border-b border-emerald-200/60 pb-3">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-house-user text-emerald-600"></i>
+                        <span data-en="Host Family & Handover Information" data-jp="ホストファミリー＆引き渡し情報">Host Family & Handover Information</span>
+                    </h3>
+                    <span class="bg-emerald-200 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-full" data-en="Daily Handover: 2:30 PM" data-jp="引き渡し: 14:30">Daily Handover: 2:30 PM</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed" data-en="Japanese students will spend specific evenings with assigned host families in Sonepat to experience authentic Indian family culture and hospitality." data-jp="日本の生徒は特定の夕方にソネパトのホストファミリー宅に滞在し、インドの家庭文化とホスピタリティを体験します。">
+                    Japanese students will spend specific evenings with assigned host families in Sonepat to experience authentic Indian family culture and hospitality.
+                </p>
+                <div class="grid grid-cols-2 gap-3 pt-1">
+                    <div class="bg-white/80 p-3 rounded-2xl border border-emerald-100 text-center">
+                        <span class="block text-xs text-slate-500 font-medium" data-en="Handover Venue" data-jp="引き渡し場所">Handover Venue</span>
+                        <span class="block text-xs font-bold text-emerald-900 mt-1" data-en="Conference Hall, Intl Block" data-jp="国際館 カンファレンスホール">Conference Hall, Intl Block</span>
+                    </div>
+                    <div class="bg-white/80 p-3 rounded-2xl border border-emerald-100 text-center">
+                        <span class="block text-xs text-slate-500 font-medium" data-en="Handover Officers" data-jp="担当教員">Handover Officers</span>
+                        <span class="block text-xs font-bold text-emerald-900 mt-1">Mr Onkar Tyagi & Mr Ravinder</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <p class="text-sm text-slate-300 font-semibold" data-en="Rishikul Vidyapeeth Sonepat, Haryana, India" data-jp="リシクル・ヴィディヤピート校（インド・ハリヤナ州ソネパト）">
+                Rishikul Vidyapeeth Sonepat, Haryana, India
+            </p>
+            <p class="text-xs text-slate-500" data-en="Japan-India Cultural Exchange Programme Schedule (08 - 18 October 2026)" data-jp="日本・インド文化交流プログラム スケジュール（2026年10月8日〜18日）">
+                Japan-India Cultural Exchange Programme Schedule (08 - 18 October 2026)
+            </p>
+            <div class="pt-2 text-xs text-rose-400/80 flex items-center justify-center gap-2">
+                <span>🇮🇳 Friendship & Goodwill 🇯🇵</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Current Language State
+        let currentLang = 'en';
+
+        // Coordination Data
+        const coordinatorsData = [
+            { role_en: 'Overall Coordinator', role_jp: '統括コーディネーター', name: 'Ms Archana Sharma', phone: '9991117374', icon: 'fa-user-tie', color: 'rose' },
+            { role_en: 'General Coordinators', role_jp: '一般コーディネーター', name: 'Mr Umesh, Ms Kriti, Ms Nisha, Ms Surabhi', icon: 'fa-clipboard-user', color: 'amber' },
+            { role_en: 'Programme Leads', role_jp: 'プログラムリード', name: 'Ms Rajesh Bala, Mr Bhup Singh, Ms Neetu Singh', icon: 'fa-star', color: 'emerald' },
+            { role_en: 'Transport & Protocol', role_jp: '交通・プロトコル', name: 'Mr Ashok Kaushik, Mr Ganesh, Mr Vikas', icon: 'fa-bus', color: 'cyan' },
+        ];
+
+        // Master Schedule Data extracted from the document
+        const scheduleData = [
+            {
+                dayNum: 1,
+                date: 'Thursday, 08 Oct 2026',
+                dateJp: '2026年10月08日(木)',
+                events: [
+                    { time: '1:00 PM', titleEn: 'Departure of Welcome Team for Delhi IGI Airport (Terminal 3)', titleJp: '迎賓チームがデリーIGI空港（ターミナル3）へ出発', venue: 'IGI Airport T3', coordinator: 'Mr Bhup Singh', category: 'Excursion', notesEn: 'Vehicle: School Ertiga & EECO. Carry water bottles, camera, school banner.', notesJp: '車両: 学校車（Ertiga, EECO）。水、カメラ、横断幕を携行。' },
+                    { time: '4:20 PM', titleEn: 'Flight Arrival at New Delhi Airport', titleJp: 'ニューデリー空港にフライト到着', venue: 'IGI Airport Terminal 3', coordinator: 'Welcome Team', category: 'Culture', notesEn: 'Delegation arrival.', notesJp: '訪日団到着' },
+                    { time: '7:30 PM', titleEn: 'Arrival at Suites & Ceremonial Welcome by Boarding Girls', titleJp: '国際館到着＆女子寮生による歓迎式典', venue: 'Suites / International Block', coordinator: 'Ms Neetu, Ms Anshika', category: 'Culture', notesEn: 'Suite Allotment: Ms Vanita, Ms Pinki. Peons: Ms Sita, Mr Mukesh.', notesJp: '部屋割り: ヴァニタ先生、ピンキー先生。' },
+                    { time: '7:30 PM', titleEn: 'Welcome Dinner for Japanese Delegation', titleJp: '訪日団歓迎夕食会', venue: 'Dining Hall of Suites', coordinator: 'Mr Bhup Singh', category: 'Culture', notesEn: 'Japanese Teachers & Students.', notesJp: '日本人教員・生徒対象' },
+                    { time: '9:00 PM', titleEn: 'Rest & Sleep in Suites', titleJp: '国際館にて就寝・休憩', venue: 'Suites', coordinator: 'Host Duty', category: 'Culture', notesEn: 'Japanese students stay in Suites.', notesJp: '生徒は国際館スイートに宿泊' }
+                ]
+            },
+            {
+                dayNum: 2,
+                date: 'Friday, 09 Oct 2026',
+                dateJp: '2026年10月09日(金)',
+                events: [
+                    { time: '6:30 AM', titleEn: 'Yoga Session', titleJp: '朝のヨガセッション', venue: 'Tennis Court Lawn', coordinator: 'Mr Prabhakar Tiwari', category: 'Sports', notesEn: 'Morning wellness practice.', notesJp: '朝の健康ヨガ' },
+                    { time: '7:30 AM', titleEn: 'Breakfast for Japanese Delegation', titleJp: '朝食', venue: 'Dining Hall of Suites', coordinator: 'Mr Ashok Kaushik', category: 'Culture', notesEn: 'Peons: Mr Mukesh, Ms Sita.', notesJp: 'スタッフ: ムケシュ、シタ' },
+                    { time: '8:45 AM', titleEn: 'Welcome in Joint Morning Assembly', titleJp: '全校朝会での歓迎式典', venue: 'Senior Wing Assembly Ground', coordinator: 'Mr Umesh, Ms Kriti, Mr Onkar, Ms Renu', category: 'Culture', notesEn: 'Garlanding & Presentation of Welcome Souvenir by Ms Rajesh Bala & Ms Tannu.', notesJp: '花輪贈呈＆記念品授与（ラジェシュ・バラ先生、タンヌ先生）' },
+                    { time: '10:00 AM', titleEn: 'Interaction with Chairman & Tea/Juice Refreshment', titleJp: '理事長との交流会＆ティータイム', venue: 'Chairman Office / Conference Hall', coordinator: 'Ms Tannu, Ms Priyanka', category: 'Academic', notesEn: 'Support Staff: Mr Rajesh.', notesJp: 'お茶・ジュースの提供' },
+                    { time: '11:00 AM', titleEn: 'Round of Senior Wing & Class Observation', titleJp: 'シニアウィング見学＆授業参観', venue: 'Senior Wing Classrooms', coordinator: 'Mr Manoj (English), Mr Subhash (Maths), Mr Sanjay (Physics), Ms Manju (Business Studies)', category: 'Academic', notesEn: 'Observation of English, Maths, Physics, and Business Studies classes.', notesJp: '英語、数学、物理、経営学の授業を参観' },
+                    { time: '12:10 PM', titleEn: 'Lunch at Suites', titleJp: '昼食', venue: 'Suites Dining Hall', coordinator: 'Ms Vanita', category: 'Culture', notesEn: 'Provided in Suites.', notesJp: 'スイートにて提供' },
+                    { time: '1:00 PM', titleEn: 'Interaction with School & House Appointees', titleJp: '生徒会・ハウスリーダーとの交流会', venue: 'Conference Hall, Senior Wing', coordinator: 'Mr Onkar Tyagi, Mr Ravinder', category: 'Academic', notesEn: 'Exchange with senior student leaders.', notesJp: '生徒会幹部との意見交換' },
+                    { time: '1:40 PM', titleEn: 'Japanese Dance Rehearsal', titleJp: '日本文化ダンスリハーサル', venue: 'Gymnasium Reception', coordinator: 'Ms Tanu (Sr)', category: 'Culture', notesEn: 'Performance preparation.', notesJp: 'パフォーマンス準備' },
+                    { time: '2:30 PM', titleEn: 'Handover of Japanese Students to Host Families', titleJp: 'ホストファミリーへの生徒引き渡し', venue: 'Conference Hall, International Block', coordinator: 'Mr Onkar Tyagi, Mr Ravinder', category: 'Host', notesEn: 'Students will stay with host families.', notesJp: '生徒はホストファミリー宅へ' },
+                    { time: '2:30 PM', titleEn: 'Meeting with Wing Coordinators (Teachers Only)', titleJp: '各部コーディネーター会議（教員のみ）', venue: 'Conference Hall, Senior Wing', coordinator: 'Mr Onkar Tyagi, Mr Subhash Kundu', category: 'Academic', notesEn: 'Strategic discussion for teachers.', notesJp: '教員による意見交換' },
+                    { time: '4:30 PM', titleEn: 'Round of Sports Complex (Japanese Teachers)', titleJp: 'スポーツ複合施設見学（教員のみ）', venue: 'Sports Complex', coordinator: 'Ms Pallavi, Mr Parveen, Mr Manoj', category: 'Sports', notesEn: 'Facility tour.', notesJp: '施設案内' },
+                    { time: '7:00 PM', titleEn: 'Dinner in Suites Dining Hall (Japanese Teachers)', titleJp: '教員夕食', venue: 'Suites Dining Hall', coordinator: 'Mr Bhup Singh', category: 'Culture', notesEn: 'Teachers dinner.', notesJp: '教員用ディナー' }
+                ]
+            },
+            {
+                dayNum: 3,
+                date: 'Saturday, 10 Oct 2026',
+                dateJp: '2026年10月10日(土)',
+                events: [
+                    { time: '6:30 AM', titleEn: 'Yoga Session', titleJp: '朝のヨガセッション', venue: 'Tennis Court Lawn', coordinator: 'Mr Prabhakar Tiwari', category: 'Sports', notesEn: 'Morning session.', notesJp: '朝のヨガ' },
+                    { time: '7:30 AM', titleEn: 'Breakfast in Suites', titleJp: '朝食', venue: 'Suites Dining Hall', coordinator: 'Mr Bhup Singh', category: 'Culture', notesEn: 'Delegation breakfast.', notesJp: '朝食' },
+                    { time: '8:30 AM', titleEn: 'Hindi Survival Class', titleJp: '日常ヒンディー語講座', venue: 'Language Lab', coordinator: 'Mr Ravinder', category: 'Academic', notesEn: 'Basic conversational Hindi skills for delegates.', notesJp: '旅行・日常会話で使える基本ヒンディー語' },
+                    { time: '9:30 AM', titleEn: 'Visit to Learning Yard Pre School Eldeco', titleJp: 'ラーニング・ヤード 幼児園エルデコ訪問', venue: 'Eldeco Campus', coordinator: 'Mr Vikas', category: 'Excursion', notesEn: 'Vehicle: Tempo Traveller.', notesJp: '移動: テンポトラベラー' },
+                    { time: '12:30 PM', titleEn: 'Lunch at Suites', titleJp: '昼食', venue: 'Suites', coordinator: 'Ms Vanita Nagpal', category: 'Culture', notesEn: 'Midday meal.', notesJp: '昼食' },
+                    { time: '1:30 PM', titleEn: 'Japanese Dance Rehearsal', titleJp: 'ダンスリハーサル', venue: 'Gymnasium Reception', coordinator: 'Ms Tannu (Sr)', category: 'Culture', notesEn: 'Practice session.', notesJp: '練習セッション' },
+                    { time: '4:30 PM', titleEn: 'Basketball Show Match', titleJp: 'バスケットボール エキシビションマッチ', venue: 'Basketball Court', coordinator: 'Ms Pallavi, Mr Shyam', category: 'Sports', notesEn: 'Exhibition match.', notesJp: '親善試合' },
+                    { time: '7:00 PM', titleEn: 'Dinner at Suites', titleJp: '夕食', venue: 'Suites', coordinator: 'Ms Anshika', category: 'Culture', notesEn: 'Japanese Delegation Dinner.', notesJp: '夕食' }
+                ]
+            },
+            {
+                dayNum: 4,
+                date: 'Sunday, 11 Oct 2026',
+                dateJp: '2026年10月11日(日)',
+                events: [
+                    { time: '6:30 AM', titleEn: 'Yoga Session', titleJp: '朝のヨガ', venue: 'Tennis Court Lawn', coordinator: 'Mr Prabhakar Tiwari', category: 'Sports', notesEn: 'Morning session.', notesJp: '朝のヨガ' },
+                    { time: '8:15 AM', titleEn: 'Full Day Excursion to New Delhi', titleJp: 'ニューデリー一日観光ツアー', venue: 'Delhi Monuments & Markets', coordinator: 'Mr Manoj Kumar, Mr Ganesh', category: 'Excursion', notesEn: 'Visiting: Lotus Temple, India Gate, War Memorial, PM Museum & INA Market. Vehicle: Ertiga.', notesJp: '見学先: ロータス寺院、インド門、戦没者慰霊碑、首相博物館、INAマーケット。ランチはデリーのレストランにて。' },
+                    { time: '5:00 PM', titleEn: 'Departure back to Sonepat', titleJp: 'ソネパトへ移動開始', venue: 'En route to Sonepat', coordinator: 'Mr Manoj Kumar', category: 'Excursion', notesEn: 'Return journey.', notesJp: '帰路' },
+                    { time: '8:30 PM', titleEn: 'Arrival in Suites & Dinner', titleJp: '学校到着＆夕食', venue: 'Suites Dining Hall', coordinator: 'Mr Manoj', category: 'Culture', notesEn: 'Students stay in Suites.', notesJp: '生徒はスイート泊' }
+                ]
+            },
+            {
+                dayNum: 5,
+                date: 'Monday, 12 Oct 2026',
+                dateJp: '2026年10月12日(月)',
+                events: [
+                    { time: '8:30 AM', titleEn: 'Round of Millennium Tower Science & Tech Labs', titleJp: 'ミレニアムタワー（科学・ITラボ）見学', venue: 'Millennium Tower', coordinator: 'Mr Onkar, Mr Subhash Kundu', category: 'Academic', notesEn: 'Exploration of state-of-the-art laboratory facilities.', notesJp: '最新実験室・IT施設の視察' },
+                    { time: '9:30 AM', titleEn: 'Round of Primary Wing', titleJp: '初等部見学', venue: 'Primary Wing', coordinator: 'Ms Praveen, Ms Mamta Jain', category: 'Academic', notesEn: 'Primary classroom visits & activity interaction.', notesJp: '初等部クラス見学と体験' },
+                    { time: '1:00 PM', titleEn: 'Hindi Survival Class Part II', titleJp: 'ヒンディー語講座パート2', venue: 'Hindi Lab, Millennium Tower', coordinator: 'Mr Ravinder', category: 'Academic', notesEn: 'Interactive language activities.', notesJp: '参加型ヒンディー語学習' },
+                    { time: '1:45 PM', titleEn: 'Art & Craft Cultural Class', titleJp: '伝統アート＆クラフト体験', venue: 'Art & Craft Lab, Middle Wing', coordinator: 'Ms Tanu', category: 'Culture', notesEn: 'Indian traditional arts workshop.', notesJp: 'インド伝統工芸ワークショップ' },
+                    { time: '2:15 PM', titleEn: 'Handover to Host Families', titleJp: 'ホストファミリーへの引き渡し', venue: 'Conference Hall, International Block', coordinator: 'Mr Onkar Tyagi, Mr Ravinder', category: 'Host', notesEn: 'Students head to host homes.', notesJp: '生徒はホスト宅へ' },
+                    { time: '4:30 PM', titleEn: 'Equestrian Show & Horse Riding', titleJp: '乗馬ショー＆体験', venue: 'Riding Arena', coordinator: 'Mr Jai Bhagwan, Mr Yaddu', category: 'Sports', notesEn: 'Horse riding exhibition.', notesJp: '乗馬パフォーマンス' }
+                ]
+            },
+            {
+                dayNum: 6,
+                date: 'Tuesday, 13 Oct 2026',
+                dateJp: '2026年10月13日(火)',
+                events: [
+                    { time: '5:00 AM', titleEn: 'Early Morning Departure for Agra (Taj Mahal Day Trip)', titleJp: 'アグラ（タージ・マハル）への早朝特別日帰り旅行', venue: 'Agra, Uttar Pradesh', coordinator: 'Mr Ashok Kaushik, Mr Ganesh', category: 'Excursion', notesEn: 'Vehicle: Ertiga. Visit world wonder Taj Mahal. Lunch at top restaurant in Agra.', notesJp: '世界遺産タージ・マハル見学。アグラ市内レストランにて昼食。水・果物提供。' },
+                    { time: '5:00 PM', titleEn: 'Departure from Agra to Sonepat', titleJp: 'アグラ発 ソネパトへ帰路', venue: 'En route', coordinator: 'Mr Ashok Kaushik', category: 'Excursion', notesEn: 'Return travel.', notesJp: '帰路' },
+                    { time: '8:30 PM', titleEn: 'Arrival in Suites & Dinner', titleJp: '学校到着・遅めの夕食', venue: 'Suites Dining Hall', coordinator: 'Mr Ashok Kaushik', category: 'Culture', notesEn: 'Rest & sleep in Suites.', notesJp: 'スイートにて就寝' }
+                ]
+            },
+            {
+                dayNum: 7,
+                date: 'Wednesday, 14 Oct 2026',
+                dateJp: '2026年10月14日(水)',
+                events: [
+                    { time: '8:45 AM', titleEn: 'Round of Science Park', titleJp: 'サイエンスパーク見学', venue: 'Science Park Campus', coordinator: 'Ms Pratibha, Ms Shruti', category: 'Academic', notesEn: 'Interactive outdoor science models.', notesJp: '屋外体験型科学展示' },
+                    { time: '9:30 AM', titleEn: 'Secondary Wing Round & Collaborative Learning Session', titleJp: '中等部見学＆協働学習セッション', venue: 'Secondary Wing Classrooms', coordinator: 'Ms Vijay Laxmi, Ms Pratibha', category: 'Academic', notesEn: 'Joint student learning tasks.', notesJp: '日印の生徒共同ワークショップ' },
+                    { time: '11:00 AM', titleEn: 'Interaction with Secondary Wing Appointees', titleJp: '中等部代表生徒との対談', venue: 'Conference Room (Secondary Wing)', coordinator: 'Ms Vijay Laxmi, Ms Pratibha', category: 'Academic', notesEn: 'Student council discussion.', notesJp: '代表生徒との交流' },
+                    { time: '2:15 PM', titleEn: 'Secondary Wing Teachers Meeting', titleJp: '中等部教員協議会', venue: 'Conference Hall', coordinator: 'Ms Vijay Laxmi, Ms Pratibha', category: 'Academic', notesEn: 'Pedagogical exchange.', notesJp: '教育方法の意見交換' },
+                    { time: '2:30 PM', titleEn: 'Handover to Host Families', titleJp: 'ホストファミリーへの引き渡し', venue: 'Conference Hall, Intl Block', coordinator: 'Mr Onkar Tyagi, Mr Ravinder', category: 'Host', notesEn: 'Evening with families.', notesJp: 'ホストファミリーとの夕刻' },
+                    { time: '4:30 PM', titleEn: 'Friendly Volleyball Match', titleJp: '親善バレーボール大会', venue: 'Volleyball Courts', coordinator: 'Mr Parveen, Mr Udit, Mr Bhup Singh', category: 'Sports', notesEn: 'Sports interaction.', notesJp: 'スポーツ交流試合' }
+                ]
+            },
+            {
+                dayNum: 8,
+                date: 'Thursday, 15 Oct 2026',
+                dateJp: '2026年10月15日(木)',
+                events: [
+                    { time: '8:15 AM', titleEn: 'Arrival of Japanese Students with Host Buddies', titleJp: 'ホストファミリー生徒と一緒に登校', venue: 'Middle Wing Ground', coordinator: 'Ms Neetu Singh, Ms Monika Dutta', category: 'Host', notesEn: 'Students arrive with buddies.', notesJp: 'バディと共に登校' },
+                    { time: '9:15 AM', titleEn: 'Indian Culinary & Cooking Class', titleJp: 'インド料理・クッキング体験', venue: 'Middle Wing Kitchen Lab', coordinator: 'Ms Pinki', category: 'Culture', notesEn: 'Hands-on traditional Indian dish preparation.', notesJp: '伝統的なインド料理の調理体験' },
+                    { time: '11:30 AM', titleEn: 'Feedback & Reflections Session with Chairman', titleJp: '理事長との振り返り・フィードバック懇談会', venue: 'Chairman Office', coordinator: 'Mr Umesh', category: 'Academic', notesEn: 'Program review and exchange of thoughts.', notesJp: 'プログラムの感想・振り返り' },
+                    { time: '4:30 PM', titleEn: 'Local Market Shopping Tour', titleJp: '地元ソネパト市場でショッピング', venue: 'Sonepat City Market', coordinator: 'Ms Rekha Gulia, Ms Pooja Dahiya', category: 'Excursion', notesEn: 'Souvenir and local artifacts shopping.', notesJp: 'お土産・伝統工芸品の買物' },
+                    { time: '7:30 PM', titleEn: 'Special Dinner at Gulshan Dhaba', titleJp: '名物グルシャン・ダバでの特別ディナー', venue: 'Gulshan Dhaba Murthal', coordinator: 'Mr Dheeraj, Ms Archana', category: 'Culture', notesEn: 'Famous authentic North Indian Dhaba experience.', notesJp: '北インド伝統の有名ダバ（レトロ食堂）で夕食' }
+                ]
+            },
+            {
+                dayNum: 9,
+                date: 'Friday, 16 Oct 2026',
+                dateJp: '2026年10月16日(金)',
+                events: [
+                    { time: '8:45 AM', titleEn: 'Class Observation: Grade X English', titleJp: '10年生（高校1年相当）英語授業参観', venue: 'Secondary Wing Class X', coordinator: 'English Department', category: 'Academic', notesEn: 'Observe literature & language teaching.', notesJp: '英語授業の参観' },
+                    { time: '9:45 AM', titleEn: 'Visit to Learning Yard Pre School Model Town', titleJp: 'ラーニング・ヤード 模範都市園訪問', venue: 'Model Town Campus', coordinator: 'Mr Vikas', category: 'Excursion', notesEn: 'Vehicle: Ertiga.', notesJp: '移動: エルティガ' },
+                    { time: '12:50 PM', titleEn: 'Grand Cultural Dance Practice & Rehearsal', titleJp: '文化交流ダンス総リハーサル', venue: 'Gymnasium', coordinator: 'Ms Tannu (Senior)', category: 'Culture', notesEn: 'Final stage preparation.', notesJp: '最終ステージリハーサル' },
+                    { time: '3:30 PM', titleEn: 'Local Handicrafts Shopping Tour', titleJp: '地元のハンディクラフト・手芸市場見学', venue: 'Local Market', coordinator: 'Ms Nisha, Ms Monika', category: 'Excursion', notesEn: 'Explore Indian textiles and crafts.', notesJp: 'テキスタイル・手芸品市場の買物' },
+                    { time: '7:00 PM', titleEn: 'Dinner in Suites', titleJp: '夕食', venue: 'Suites Dining Hall', coordinator: 'Ms Rajesh Bala', category: 'Culture', notesEn: 'Delegation evening meal.', notesJp: '夕食' }
+                ]
+            },
+            {
+                dayNum: 10,
+                date: 'Saturday, 17 Oct 2026',
+                dateJp: '2026年10月17日(土)',
+                events: [
+                    { time: '8:30 AM', titleEn: 'Excursion to Rishikul Vidyapeeth Jagos Campus', titleJp: 'リシクル・ヴィディヤピート・ジャゴス校舎訪問', venue: 'Jagos Campus', coordinator: 'Mr Vikas, Mr Ganesh', category: 'Excursion', notesEn: 'Visit sister campus. Lunch served at Jagos.', notesJp: 'ジャゴス校舎訪問。現地にて昼食支給。' },
+                    { time: '4:30 PM', titleEn: 'Friendly Boxing & Badminton Tournaments', titleJp: 'ボクシング＆バドミントン交流試合', venue: 'Sports Indoor Arena', coordinator: 'Mr Jai Bhagwan, Mr Manjeet, Mr Neeraj', category: 'Sports', notesEn: 'Sports interaction and friendliness.', notesJp: 'スポーツ交流トーナメント' },
+                    { time: '7:30 PM', titleEn: 'Farewell Gala Dinner', titleJp: '送別ガラディナー', venue: 'Suites Dining Hall', coordinator: 'Mr Manoj Singh', category: 'Culture', notesEn: 'Celebratory farewell evening.', notesJp: '送別夕食会' }
+                ]
+            },
+            {
+                dayNum: 11,
+                date: 'Sunday, 18 Oct 2026',
+                dateJp: '2026年10月18日(日)',
+                events: [
+                    { time: '7:30 AM', titleEn: 'Packing & Luggage Preparation', titleJp: '荷造り・帰国準備', venue: 'Suites', coordinator: 'Self / Duty Staff', category: 'Culture', notesEn: 'Pack luggage and prepare travel docs.', notesJp: '帰国荷物の整理' },
+                    { time: '12:00 PM', titleEn: 'Farewell Lunch at Suites', titleJp: '送別お別れランチ', venue: 'Suites Dining Hall', coordinator: 'Mr Ashok Kaushik', category: 'Culture', notesEn: 'Final meal together.', notesJp: '最後の昼食会' },
+                    { time: '1:00 PM', titleEn: 'Departure from Sonepat to Delhi IGI Airport', titleJp: 'ソネパト発 デリーIGI空港へ移動', venue: 'School Gate to Delhi IGI', coordinator: 'Mr Ashok Kaushik', category: 'Excursion', notesEn: 'Escorted departure.', notesJp: '空港への送り' },
+                    { time: '7:05 PM', titleEn: 'Flight Departure for Japan', titleJp: '日本へのフライト離陸', venue: 'Indira Gandhi International Airport', coordinator: 'Flight Protocol', category: 'Culture', notesEn: 'Safe travels back to Japan!', notesJp: '日本へ安全なご帰国を！' }
+                ]
+            }
+        ];
+
+        // Active Selected Day (-1 for All)
+        let selectedDayNum = 1;
+
+        // Render Coordinators
+        function renderCoordinators() {
+            const container = document.getElementById('coordinators-grid');
+            container.innerHTML = coordinatorsData.map(c => `
+                <div class="bg-slate-50 border border-slate-200/80 p-4 rounded-2xl flex items-start gap-3 hover:shadow-md transition">
+                    <div class="w-10 h-10 rounded-xl bg-${c.color}-100 text-${c.color}-600 flex items-center justify-center font-bold shrink-0">
+                        <i class="fa-solid ${c.icon}"></i>
+                    </div>
+                    <div>
+                        <span class="block text-[11px] font-bold uppercase tracking-wider text-slate-400" data-en="${c.role_en}" data-jp="${c.role_jp}">
+                            ${currentLang === 'en' ? c.role_en : c.role_jp}
+                        </span>
+                        <h4 class="text-sm font-bold text-slate-800 mt-0.5">${c.name}</h4>
+                        ${c.phone ? `<p class="text-xs text-rose-600 font-semibold mt-1"><i class="fa-solid fa-phone text-[10px] mr-1"></i>${c.phone}</p>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render Day Tabs
+        function renderDayTabs() {
+            const container = document.getElementById('dayTabsContainer');
+            let html = `
+                <button onclick="selectDay(-1)" class="px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition ${selectedDayNum === -1 ? 'bg-slate-900 text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'}">
+                    <span data-en="All Days (11)" data-jp="全行程 (11日間)">${currentLang === 'en' ? 'All Days (11)' : '全行程 (11日間)'}</span>
+                </button>
+            `;
+
+            scheduleData.forEach(d => {
+                const isActive = selectedDayNum === d.dayNum;
+                html += `
+                    <button onclick="selectDay(${d.dayNum})" class="px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition ${isActive ? 'bg-rose-600 text-white shadow-md shadow-rose-200' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'}">
+                        Day ${d.dayNum} (${d.date.split(',')[1].trim().substring(0, 6)})
+                    </button>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        // Select Day Filter
+        function selectDay(dayNum) {
+            selectedDayNum = dayNum;
+            renderDayTabs();
+            filterSchedule();
+        }
+
+        // Filter and Render Schedule Events
+        function filterSchedule() {
+            const searchVal = document.getElementById('scheduleSearch').value.toLowerCase();
+            const categoryVal = document.getElementById('categoryFilter').value;
+            const container = document.getElementById('scheduleCardsContainer');
+
+            let filteredDays = scheduleData;
+            if (selectedDayNum !== -1) {
+                filteredDays = scheduleData.filter(d => d.dayNum === selectedDayNum);
+            }
+
+            let cardsHtml = '';
+            let totalMatchCount = 0;
+
+            filteredDays.forEach(day => {
+                const matchingEvents = day.events.filter(ev => {
+                    const matchSearch = ev.titleEn.toLowerCase().includes(searchVal) ||
+                                        ev.titleJp.toLowerCase().includes(searchVal) ||
+                                        ev.venue.toLowerCase().includes(searchVal) ||
+                                        ev.coordinator.toLowerCase().includes(searchVal);
+                    const matchCategory = categoryVal === 'ALL' || ev.category === categoryVal;
+                    return matchSearch && matchCategory;
+                });
+
+                if (matchingEvents.length > 0) {
+                    totalMatchCount += matchingEvents.length;
+                    cardsHtml += `
+                        <div class="bg-white rounded-3xl border border-slate-200/90 p-5 sm:p-6 shadow-sm space-y-4">
+                            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                                <div class="flex items-center gap-3">
+                                    <span class="bg-rose-100 text-rose-800 text-xs font-black px-3 py-1 rounded-xl uppercase">Day ${day.dayNum}</span>
+                                    <h3 class="text-base sm:text-lg font-bold text-slate-900">${currentLang === 'en' ? day.date : day.dateJp}</h3>
+                                </div>
+                                <span class="text-xs text-slate-400 font-medium">${matchingEvents.length} ${currentLang === 'en' ? 'Activities' : '項目'}</span>
+                            </div>
+
+                            <div class="divide-y divide-slate-100">
+                                ${matchingEvents.map(ev => getEventRowHtml(ev)).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            if (totalMatchCount === 0) {
+                container.innerHTML = `
+                    <div class="bg-white rounded-3xl border border-dashed border-slate-300 p-12 text-center text-slate-400 space-y-2">
+                        <i class="fa-solid fa-calendar-xmark text-4xl text-slate-300"></i>
+                        <p class="text-sm font-semibold">${currentLang === 'en' ? 'No activities match your filter.' : '該当するスケジュールは見つかりませんでした。'}</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = cardsHtml;
+            }
+        }
+
+        // Return Item Row Badge Color
+        function getCategoryBadge(cat) {
+            switch (cat) {
+                case 'Culture': return 'bg-rose-50 text-rose-700 border-rose-200';
+                case 'Excursion': return 'bg-amber-50 text-amber-700 border-amber-200';
+                case 'Sports': return 'bg-emerald-50 text-emerald-700 border-emerald-200';
+                case 'Academic': return 'bg-indigo-50 text-indigo-700 border-indigo-200';
+                case 'Host': return 'bg-teal-50 text-teal-700 border-teal-200';
+                default: return 'bg-slate-50 text-slate-700 border-slate-200';
+            }
+        }
+
+        // Event Row Markup Generator
+        function getEventRowHtml(ev) {
+            const badgeStyle = getCategoryBadge(ev.category);
+            const title = currentLang === 'en' ? ev.titleEn : ev.titleJp;
+            const notes = currentLang === 'en' ? ev.notesEn : ev.notesJp;
+
+            return `
+                <div class="py-3.5 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-start justify-between gap-3 hover:bg-slate-50/80 p-2 rounded-2xl transition">
+                    <div class="flex items-start gap-3 sm:w-1/4 shrink-0">
+                        <span class="inline-block bg-slate-900 text-white text-xs font-mono font-bold px-2.5 py-1 rounded-lg">
+                            ${ev.time}
+                        </span>
+                        <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${badgeStyle} sm:hidden">
+                            ${ev.category}
+                        </span>
+                    </div>
+
+                    <div class="sm:w-2/4 space-y-1">
+                        <h4 class="text-sm font-bold text-slate-800 leading-snug">${title}</h4>
+                        <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500">
+                            <span><i class="fa-solid fa-location-dot text-rose-500 mr-1"></i>${ev.venue}</span>
+                            <span><i class="fa-solid fa-user-check text-indigo-500 mr-1"></i>${ev.coordinator}</span>
+                        </div>
+                        ${notes ? `<p class="text-xs text-slate-500 bg-slate-100/80 px-2.5 py-1 rounded-lg italic mt-1">${notes}</p>` : ''}
+                    </div>
+
+                    <div class="hidden sm:flex sm:w-1/4 justify-end">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-full border ${badgeStyle} h-fit">
+                            ${ev.category}
+                        </span>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Toggle Language Function
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'jp' : 'en';
+            document.getElementById('langLabel').innerText = currentLang === 'en' ? '日本語に切り替え' : 'Switch to English';
+
+            // Update static elements with data-en / data-jp attributes
+            document.querySelectorAll('[data-en]').forEach(el => {
+                if (currentLang === 'en') {
+                    el.innerText = el.getAttribute('data-en');
+                } else {
+                    el.innerText = el.getAttribute('data-jp');
+                }
+            });
+
+            // Re-render components
+            renderCoordinators();
+            renderDayTabs();
+            filterSchedule();
+        }
+
+        function updateCountdown() {
+            const eventDate = new Date('October 08, 2026 16:20:00 GMT+0530').getTime();
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+
+            if (diff <= 0) {
+                document.getElementById('cd-days').innerText = '00';
+                document.getElementById('cd-hours').innerText = '00';
+                document.getElementById('cd-mins').innerText = '00';
+                document.getElementById('cd-secs').innerText = '00';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('cd-days').innerText = String(days).padStart(2, '0');
+            document.getElementById('cd-hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('cd-mins').innerText = String(mins).padStart(2, '0');
+            document.getElementById('cd-secs').innerText = String(secs).padStart(2, '0');
+        }
+
+        // Initialization
+        window.onload = function() {
+            renderCoordinators();
+            renderDayTabs();
+            filterSchedule();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        };
+    </script>
+</body>
+</html>
+
